@@ -1,0 +1,248 @@
+$BLACK: #000000;
+$WHITE: #ffffff;
+$PRIMARY: #4b5a95;
+$SECONDRY: #370157;
+//
+$HEADER__TEXT: #cecece;
+
+$MINTING_BG: #e0e0e0;
+$BORDER__CLR: #6e6e6e;
+
+$sizes: 500;
+$percents: 200;
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.object-fit-contain {
+  object-fit: contain;
+}
+
+@mixin text(
+  $size,
+  $spacing,
+  $fontWeight: normal,
+  $textTransform: initial,
+  // $fontFamily: PT mono,
+    $fontStyle: normal,
+  $color: $BLACK
+) {
+  @if $fontWeight == '' {
+    font-weight: normal;
+  } @else {
+    font-weight: $fontWeight;
+  }
+
+  @if $textTransform == '' {
+    text-transform: initial;
+  } @else {
+    text-transform: $textTransform;
+  }
+
+  // @if $fontFamily == '' {
+  //   font-family: Montserrat;
+  // } @else {
+  //   font-family: $fontFamily;
+  // }
+  @if $fontStyle == '' {
+    font-style: normal;
+  } @else {
+    font-style: $fontStyle;
+  }
+
+  font-size: $size;
+  letter-spacing: $spacing;
+  color: $color;
+}
+
+@mixin colors {
+  .btn-bg {
+    &--color-000000 {
+      background: #000000 !important;
+    }
+    &--color-ffffff {
+      background: #ffffff !important;
+    }
+    &--color-4c4a45 {
+      background: #4c4a45 !important;
+    }
+    &--color-494644 {
+      background: #494644 !important;
+    }
+    &--color-878787 {
+      background: #878787 !important;
+    }
+    &--color-f2f2f2 {
+      background: #f2f2f2 !important;
+    }
+    &--color-bdbcbc {
+      background: #bdbcbc !important;
+    }
+    &--color-e3e3e3 {
+      background: #e3e3e3 !important;
+    }
+    &--color-eb5757 {
+      background: #eb5757 !important;
+    }
+    &--color-e20303 {
+      background: #e20303 !important;
+    }
+    &--color-32cda3 {
+      background: #32cda3 !important;
+    }
+    &--color-001aff {
+      background: #001aff !important;
+    }
+    &--color-ffb038 {
+      background: #ffb038 !important;
+    }
+    &--color-ffaf38 {
+      background: #ffaf38 !important;
+    }
+    &--color-f4f4f4 {
+      background: #f4f4f4 !important;
+    }
+    &--color-cacaca {
+      background: #cacaca !important;
+    }
+    &--color-262626 {
+      background: #262626 !important;
+    }
+    &--color-424770 {
+      background: #424770 !important;
+    }
+    &--color-e31913 {
+      background: #e31913 !important;
+    }
+    &--color-909090 {
+      background: #909090 !important;
+    }
+    &--color-f8f8f8 {
+      background: #f8f8f8 !important;
+    }
+    &--color-ccc {
+      background: #ccc !important;
+    }
+    &--color-b2b3b6 {
+      background: #b2b3b6 !important;
+    }
+    &--color-e0dfdd {
+      background: #e0dfdd !important;
+    }
+    &--color-818285 {
+      background: #818285 !important;
+    }
+    &--color-f4f4f4 {
+      background: #f4f4f4 !important;
+    }
+    &--color-c4c4c4 {
+      background: #c4c4c4 !important;
+    }
+    &--color-f9f9f9 {
+      background: #f9f9f9 !important;
+    }
+    &--color-dcddde {
+      background: #dcddde !important;
+    }
+    &--color-f7f7f7 {
+      background: #f7f7f7 !important;
+    }
+    &--color-696969 {
+      background: #696969 !important;
+    }
+    &--color-e2e2e2 {
+      background: #e2e2e2 !important;
+    }
+    &--color-f3f3f3 {
+      background: #f3f3f3 !important;
+    }
+  }
+}
+
+@mixin custom-classes {
+  @for $i from 0 through $sizes {
+    $size: #{$i}px;
+
+    .p--#{$i} {
+      padding: $size !important;
+    }
+    .pl--#{$i} {
+      padding-left: $size !important;
+    }
+    .pr--#{$i} {
+      padding-right: $size !important;
+    }
+    .pt--#{$i} {
+      padding-top: $size !important;
+    }
+    .pb--#{$i} {
+      padding-bottom: $size !important;
+    }
+    .px--#{$i} {
+      padding-left: $size !important;
+      padding-right: $size !important;
+    }
+    .py--#{$i} {
+      padding-top: $size !important;
+      padding-bottom: $size !important;
+    }
+    .m--#{$i} {
+      margin: $size !important;
+    }
+    .ml--#{$i} {
+      margin-left: $size !important;
+    }
+    .mr--#{$i} {
+      margin-right: $size !important;
+    }
+    .mt--#{$i} {
+      margin-top: $size !important;
+    }
+    .mb--#{$i} {
+      margin-bottom: $size !important;
+    }
+    .mx--#{$i} {
+      margin-left: $size !important;
+      margin-right: $size !important;
+    }
+    .my--#{$i} {
+      margin-top: $size !important;
+      margin-bottom: $size !important;
+    }
+    .w--#{$i} {
+      width: $size !important;
+    }
+    .h--#{$i} {
+      height: $size !important;
+    }
+    .t--#{$i} {
+      top: $size !important;
+    }
+  }
+
+  @for $j from 1 through $percents {
+    $percent: #{$j}#{'%'};
+    .w--#{$j}\% {
+      width: $percent !important;
+    }
+    .pt--#{$j}\% {
+      padding-top: $percent !important;
+    }
+    .t--#{$j}\% {
+      top: $percent !important;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}

@@ -1,0 +1,145 @@
+.inventory-page {
+  background-color: $WHITE;
+  .page__hero {
+    margin: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero__content {
+      width: 50%;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
+      .content__heading {
+        @include text(40px, '', 600);
+        color: $PRIMARY;
+        margin: 33px 0px;
+      }
+      .content__description {
+        @include text(20px, '', '');
+        color: $PRIMARY;
+        max-width: 933px;
+        line-height: 30px;
+        margin-bottom: 10px;
+      }
+    }
+    .intro_pic {
+      margin-left: 60px;
+      width: 400px;
+      @media screen and (max-width: 900px) {
+        width: 80%;
+        object-fit: cover;
+        margin-left: 0;
+      }
+    }
+  }
+  .inventory__filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    .list__filter {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 10px;
+      width: 150px;
+    }
+  }
+  .inventory__nfts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)) !important;
+    grid-gap: 24px;
+    padding: 0 61px;
+    padding-bottom: 40px;
+    @media screen and (max-width: 900px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80%, 1fr)) !important;
+      padding: 0 30px;
+      padding-bottom: 30px;
+    }
+  }
+  .page__tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    .tab {
+      cursor: pointer;
+      @include text(24px, '', 600);
+      padding: 16px 8px;
+      color: #370157;
+    }
+  }
+}
+.border-bottom-tab {
+  border-bottom: 3px solid #370157;
+}
+
+// ======================
+//      INVENTORY CARD
+//=======================
+
+.inventory__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid $PRIMARY;
+  .card__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0px;
+    .content__left {
+      @include text(16px, '', 600);
+      color: $PRIMARY;
+    }
+    .content__right {
+      @include text(16px, '', 600);
+      color: $PRIMARY;
+      text-transform: capitalize;
+    }
+  }
+  .card__nft {
+    width: 100%;
+    object-fit: contain;
+  }
+  .card__actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    .actions--transfer {
+      @include text(14px, '', 500, uppercase);
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: 1px solid #f8760d;
+      background-color: #f8760d;
+      color: $WHITE;
+      cursor: pointer;
+    }
+    .actions--staking {
+      @include text(14px, '', 500, uppercase);
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: 1px solid #316e37;
+      background-color: #316e37;
+      color: $WHITE;
+      cursor: pointer;
+    }
+    .actions--sell {
+      @include text(14px, '', 500, uppercase);
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: 1px solid #1c2687;
+      background-color: #1c2687;
+      color: $WHITE;
+      cursor: pointer;
+    }
+  }
+}

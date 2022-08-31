@@ -1,0 +1,133 @@
+.shop-page {
+  background-color: $WHITE;
+  .page__top {
+    margin: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .top__content {
+      width: 50%;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
+      .content__heading {
+        @include text(40px, '', 600);
+        color: $PRIMARY;
+        margin: 33px 0px;
+      }
+      .content__description {
+        @include text(22px, '', 600);
+        color: $PRIMARY;
+        max-width: 933px;
+        line-height: 30px;
+        margin-bottom: 10px;
+      }
+    }
+    .intro_pic {
+      margin-left: 60px;
+      width: 400px;
+      @media screen and (max-width: 900px) {
+        width: 80%;
+        object-fit: cover;
+        margin-left: 0;
+      }
+    }
+  }
+  .page__tokens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .page__chance-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)) !important;
+    grid-gap: 24px;
+    padding: 0 61px;
+    padding-bottom: 40px;
+    @media screen and (max-width: 900px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80%, 1fr)) !important;
+      padding: 0 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+// ======================
+//      SHOP BUY CARD
+//=======================
+
+.shop__buy-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .card__content {
+    margin-right: 50px;
+    .card__heading {
+      @include text(30px, '', 700);
+      color: $PRIMARY;
+      margin: 15px 0px;
+    }
+    .card__descrip {
+      @include text(22px, '', 600);
+      color: $PRIMARY;
+      margin: 5px 0px;
+      .descrip__price {
+        color: $SECONDRY;
+      }
+      .descrip__minted {
+        color: $SECONDRY;
+      }
+    }
+  }
+  .card__img {
+    width: 300px;
+    border-radius: 6px;
+    @media screen and (max-width: 900px) {
+      width: 80%;
+      object-fit: cover;
+    }
+  }
+}
+
+// ======================
+//      SHOP CHANCE CARD
+//=======================
+
+.shop__chance-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid $PRIMARY;
+  .card__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0px;
+    .content__left {
+      @include text(16px, '', 600);
+      color: $PRIMARY;
+    }
+    .content__right {
+      @include text(16px, '', 600);
+      color: $PRIMARY;
+    }
+  }
+  .card__nft {
+    width: 100%;
+    object-fit: contain;
+  }
+}

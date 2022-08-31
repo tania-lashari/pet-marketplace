@@ -1,0 +1,127 @@
+.home-page {
+  background-color: $WHITE;
+  .page__intro {
+    margin: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .intro__content {
+      width: 50%;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
+      .content__heading {
+        @include text(40px, '', 600);
+        color: $PRIMARY;
+        margin: 33px 0px;
+      }
+      .content__description {
+        @include text(20px, '', '');
+        color: $PRIMARY;
+        max-width: 933px;
+        line-height: 30px;
+        margin-bottom: 10px;
+      }
+    }
+    .intro_pic {
+      margin-left: 60px;
+      width: 400px;
+      @media screen and (max-width: 900px) {
+        width: 80%;
+        object-fit: cover;
+        margin-left: 0;
+      }
+    }
+  }
+  .page__characters {
+    .characters__heading {
+      @include text(40px, '', 900);
+
+      color: $PRIMARY;
+      display: flex;
+      justify-content: center;
+      margin: 40px 0px;
+      width: 100%;
+    }
+    .characters__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)) !important;
+      grid-gap: 20px;
+      padding: 0 40px;
+      @media screen and (min-width: 700px) and (max-width: 900px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr)) !important;
+        grid-gap: 20px;
+        padding: 0 20px;
+      }
+      @media screen and (max-width: 700px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(94%, 1fr)) !important;
+        padding: 0 3%;
+      }
+      .list__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .list__img {
+          width: 100%;
+          object-fit: contain;
+        }
+        .list__name {
+          @include text(23px, '', 900);
+          color: $PRIMARY;
+        }
+      }
+    }
+  }
+  .page__started {
+    margin: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 900px) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .started_pic {
+      margin-right: 60px;
+      margin-left: 50px;
+      @media screen and (max-width: 900px) {
+        width: 80%;
+        object-fit: cover;
+        margin-right: 0;
+        margin-left: 0;
+
+        margin-top: 20px;
+      }
+    }
+    .started__content {
+      width: 60%;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
+      .content__heading {
+        @include text(40px, '', 600);
+        color: $PRIMARY;
+        margin: 33px 0px;
+      }
+      .content__description {
+        @include text(20px, '', '');
+        color: $PRIMARY;
+        max-width: 933px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        margin-right: 60px;
+      }
+    }
+  }
+}

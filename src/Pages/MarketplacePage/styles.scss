@@ -1,0 +1,67 @@
+.market-page {
+  background-color: $WHITE;
+  .page__hero {
+    margin: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero__content {
+      width: 50%;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
+      .content__heading {
+        @include text(40px, '', 600);
+        color: $PRIMARY;
+        margin: 33px 0px;
+      }
+      .content__description {
+        @include text(20px, '', '');
+        color: $PRIMARY;
+        max-width: 933px;
+        line-height: 30px;
+        margin-bottom: 10px;
+      }
+    }
+    .intro_pic {
+      margin-left: 60px;
+      width: 400px;
+      @media screen and (max-width: 900px) {
+        width: 80%;
+        object-fit: cover;
+        margin-left: 0;
+      }
+    }
+  }
+  .market__filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    .list__filter {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 10px;
+      width: 150px;
+    }
+  }
+  .buy__nfts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)) !important;
+    grid-gap: 24px;
+    padding: 0 61px;
+    padding-bottom: 40px;
+    @media screen and (max-width: 900px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80%, 1fr)) !important;
+      padding: 0 30px;
+      padding-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import './color.scss';
+@include custom-classes;
+@include colors;
+
+@import '../common/styles.scss';
+
+@import '../Components/styles.scss';
+@import '../Pages/HomePage/styles.scss';
+@import '../Pages/ShopPage/styles.scss';
+@import '../Pages/InventryPage/styles.scss';
+@import '../Pages/MarketplacePage/styles.scss';
